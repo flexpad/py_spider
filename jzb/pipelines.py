@@ -43,5 +43,6 @@ class JZBPipeline(object):
                 item['post'] = re.sub(urls[0] + "_\d+.\w+", base_url + image['path'], item['post'])
                 # item['post'] = item['post'].replace(urls[0] + '_\d+.png', base_url + image['path'] )
             self.db[self.collection_post].insert_one(dict(item))
+
             pass
         return item
